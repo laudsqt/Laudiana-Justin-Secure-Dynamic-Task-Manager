@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Dynamic Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <header class="app-header">
+                <p class="eyebrow">ITP10 • Event-Driven Programming</p>
+                <h1>Secure Dynamic Task Manager</h1>
+                <p class="subtitle">Create, edit, complete, and remove tasks without reloading the page.</p>
+            </header>
+
+            <form id="taskForm" class="task-form">
+                <label for="taskInput">New task</label>
+                <div class="input-row">
+                    <input id="taskInput" type="text" placeholder="Enter a task" autocomplete="off">
+                    <button id="addTaskBtn" type="submit">Add Task</button>
+                    <button id="loadSamplesBtn" type="button" class="secondary-btn">Load Sample Tasks</button>
+                </div>
+                <p id="taskMessage" class="message" role="alert" aria-live="polite"></p>
+            </form>
+
+            <section class="summary" aria-label="Task summary">
+                <div class="summary-box">
+                    <span class="summary-label">Total Tasks</span>
+                    <strong id="totalCount">0</strong>
+                </div>
+                <div class="summary-box">
+                    <span class="summary-label">Pending</span>
+                    <strong id="pendingCount">0</strong>
+                </div>
+                <div class="summary-box">
+                    <span class="summary-label">Completed</span>
+                    <strong id="completedCount">0</strong>
+                </div>
+            </section>
+
+            <section class="tasks-section">
+                <h2>Tasks</h2>
+                <ul id="taskList" class="task-list" aria-live="polite"></ul>
+            </section>
+        </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
